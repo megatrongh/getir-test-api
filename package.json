@@ -1,0 +1,99 @@
+{
+  "name": "getir-api",
+  "version": "1.0.0",
+  "description": "Getir backend api to fetch records",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start:dev": "tsc && concurrently npm:start:build npm:start:run",
+    "start:prod": "tsc && NODE_ENV=production node build/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megatrongh/getir-api.git"
+  },
+  "keywords": [
+    "Getir",
+    "api",
+    "backend",
+    "records"
+  ],
+  "author": "Klogo Gibson Selasi <klogogibson50@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megatrongh/getir-api/issues"
+  },
+  "homepage": "https://github.com/megatrongh/getir-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-joi-validation": "^5.0.0",
+    "express-validator": "^6.10.0",
+    "express-winston": "^4.1.0",
+    "joi": "^17.4.0",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "supertest": "^6.1.3",
+    "swagger-ui-express": "^4.1.6",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.2.4",
+    "@types/cors": "^2.8.10",
+    "@types/debug": "^4.1.5",
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.22",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.39",
+    "@types/supertest": "^2.0.11",
+    "@types/swagger-ui-express": "^4.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "concurrently": "^6.0.2",
+    "eslint": "^7.24.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.2.4"
+  },
+  "jest": {
+    "preset": "@shelf/jest-mongodb",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.(test|spec).(ts|tsx)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true,
+        "tsconfig": "jest.tsconfig.json"
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "src/documentation.ts"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/mocks.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/mocks.js"
+    },
+    "testEnvironment": "node"
+  }
+}
