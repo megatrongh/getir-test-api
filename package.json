@@ -12,7 +12,7 @@
     "appbuild": "tsc -w",
     "run": "nodemon build/index.js",
     "dev": "tsc && concurrently npm:appbuild npm:run",
-    "start": "tsc && NODE_ENV=production node build/index.js",
+    "start": "npm run tsc && NODE_ENV=production node build/index.js",
     "test": "jest"
   },
   "repository": {
