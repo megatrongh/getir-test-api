@@ -18,6 +18,9 @@ An expressJS with typescript application to fetch filtered records stored in a m
 ## API Docs
 `https://getir-api-server.herokuapp.com/api-docs/`
 
+## API Endpoint
+`https://getir-api-server.herokuapp.com/`
+
 
 ### Sample Request Payload
 ```
