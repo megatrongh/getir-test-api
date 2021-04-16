@@ -4,9 +4,9 @@
   "description": "Getir backend api to fetch records",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -w",
+    "appbuild": "tsc -w",
     "run": "nodemon build/index.js",
-    "dev": "tsc && concurrently npm:build npm:run",
+    "dev": "tsc && concurrently npm:appbuild npm:run",
     "start": "tsc && NODE_ENV=production node build/index.js",
     "test": "jest"
   },
