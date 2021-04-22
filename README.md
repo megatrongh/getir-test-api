@@ -7,6 +7,7 @@ An expressJS with typescript application to fetch filtered records stored in a m
 - Install NodeJS
 - Install NPM
 - clone the repository using `git clone https://github.com/megatrongh/getir-test-api.git`
+- create .env file and add the environmental variables indicated in the .env.example with the appropriate values
 - change directory into getir-test-api and run;
   - `npm i`
   - `npm run dev`
